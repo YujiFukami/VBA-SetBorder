@@ -51,7 +51,7 @@
 ![実行2中身](Readme用/実行2中身.jpg)
 
 
-プロシージャ「SetBorder」の引数は以下の通り
+プロシージャ「SetBorder2D」の引数は以下の通り
 
 
 TargetCell                  ・・・対象とするセルの範囲(Range型)
@@ -77,7 +77,7 @@ BaseCol                     ・・・基準の列（対象範囲セルの左か�
 ### 設定1（使用モジュール）
 
 -  ModTest.bas
--  ModSetBorder.bas
+-  ModSetBorder2D.bas
 -  ModEnums.bas
 
 ### 設定2（参照ライブラリ）
