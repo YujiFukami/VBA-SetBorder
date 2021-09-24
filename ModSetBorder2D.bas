@@ -18,19 +18,19 @@ Sub SetBorder2D(TargetCell As Range, BaseCol&, _
                 Optional InsideVerticalLineStyle As LineStyleEnum = LineStyleEnum.実線, _
                 Optional InsideVerticalLineWeight As LineWeightEnum = LineWeightEnum.細線)
 
-'指定セル範囲を見やすいように枠線を設定する
+'指定セル範囲を見やすいように罫線を設定する
 '基準列において、値が切り替わるところだけ水平線を太くしたりする。
 '20210917
 
 '引数
 'TargetCell                  ・・・対象とするセルの範囲(Range型)
 'BaseCol                     ・・・基準の列（対象範囲セルの左から何番目か）(Long型)
-'[EdgeLineStyle]             ・・・外側枠線のスタイル    （デフォルトは実線）
-'[EdgeLineWeight]            ・・・外側枠線の太さ        （デフォルトは中太線）
-'[InsideHorizontalLineStyle] ・・・内側水平枠線のスタイル（デフォルトは点線）
-'[InsideHorizontalLineWeight]・・・内側水平枠線の太さ    （デフォルトは細線）
-'[InsideVerticalLineStyle]   ・・・内側垂直枠線のスタイル（デフォルトは実線）
-'[InsideVerticalLineWeight]  ・・・内側垂直枠線の太さ    （デフォルトは細線）
+'[EdgeLineStyle]             ・・・外側罫線のスタイル    （デフォルトは実線）
+'[EdgeLineWeight]            ・・・外側罫線の太さ        （デフォルトは中太線）
+'[InsideHorizontalLineStyle] ・・・内側水平罫線のスタイル（デフォルトは点線）
+'[InsideHorizontalLineWeight]・・・内側水平罫線の太さ    （デフォルトは細線）
+'[InsideVerticalLineStyle]   ・・・内側垂直罫線のスタイル（デフォルトは実線）
+'[InsideVerticalLineWeight]  ・・・内側垂直罫線の太さ    （デフォルトは細線）
     
     Dim BaseList                       '基準の一次元配列
     Dim I&, J&, K&, M&, N&             '数え上げ用(Long型)
