@@ -10,7 +10,7 @@
 実行環境など報告していただくと感謝感激雨霰。
 
 # 説明
-指定セル範囲を見やすいように枠線を設定する
+指定セル範囲を見やすいように罫線を設定する
 
 基準列において、値が切り替わるところだけ水平線を太くしたりする。
 
@@ -34,7 +34,7 @@
 
 「実行テスト2」ボタンを押す
 
-2列目を基準に枠線を変更している。さらに枠線の種類が変わっている。
+2列目を基準に罫線を変更している。さらに罫線の種類が変わっている。
 
 ![実行2後](Readme用/実行2後.jpg)
 
@@ -58,17 +58,17 @@ TargetCell                  ・・・対象とするセルの範囲(Range型)
 
 BaseCol                     ・・・基準の列（対象範囲セルの左から何番目か）(Long型)
 
-[EdgeLineStyle]             ・・・外側枠線のスタイル    （デフォルトは実線）
+[EdgeLineStyle]             ・・・外側罫線のスタイル    （デフォルトは実線）
 
-[EdgeLineWeight]            ・・・外側枠線の太さ        （デフォルトは中太線）
+[EdgeLineWeight]            ・・・外側罫線の太さ        （デフォルトは中太線）
 
-[InsideHorizontalLineStyle] ・・・内側水平枠線のスタイル（デフォルトは点線）
+[InsideHorizontalLineStyle] ・・・内側水平罫線のスタイル（デフォルトは点線）
 
-[InsideHorizontalLineWeight]・・・内側水平枠線の太さ    （デフォルトは細線）
+[InsideHorizontalLineWeight]・・・内側水平罫線の太さ    （デフォルトは細線）
 
-[InsideVerticalLineStyle]   ・・・内側垂直枠線のスタイル（デフォルトは実線）
+[InsideVerticalLineStyle]   ・・・内側垂直罫線のスタイル（デフォルトは実線）
 
-[InsideVerticalLineWeight]  ・・・内側垂直枠線の太さ    （デフォルトは細線）
+[InsideVerticalLineWeight]  ・・・内側垂直罫線の太さ    （デフォルトは細線）
 
 
 ## 設定
