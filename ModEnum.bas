@@ -23,6 +23,11 @@ Public Enum LineStyleEnum '線のスタイル
     斜破線 = xlSlantDashDot
 End Enum
 
+Public Enum Direct '罫線設定で垂直or水平
+    Vertical = 1
+    Horizontal = 2
+End Enum
+
 Public Enum LineWeightEnum '線の太さ
     太線 = xlThick
     中太線 = xlMedium
@@ -331,3 +336,4 @@ Public Enum FilePropety 'ファイルのプロパティ情報
     P296ビデオの向き = 296
     P297総ビットレート = 297
 End Enum
+
