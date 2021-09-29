@@ -10,7 +10,7 @@ Option Explicit
 '------------------------------
 
 
-Sub SetBorder2D(TargetCell As Range, BaseCol&, _
+Public Sub SetBorder2D(TargetCell As Range, BaseCol&, _
                 Optional EdgeLineStyle As LineStyleEnum = LineStyleEnum.Àü, _
                 Optional EdgeLineWeight As LineWeightEnum = LineWeightEnum.’†‘¾ü, _
                 Optional InsideHorizontalLineStyle As LineStyleEnum = LineStyleEnum.“_ü, _
