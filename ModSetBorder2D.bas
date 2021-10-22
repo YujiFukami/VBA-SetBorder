@@ -3,14 +3,30 @@ Option Explicit
 
 'SetBorder2D・・・元場所：FukamiAddins3.ModBorder
 
-'------------------------------
+'宣言セクション※※※※※※※※※※※※※※※※※※※※※※※※※※※
+'-----------------------------------
+'元場所:LineStyleEnum
+Public Enum LineStyleEnum '線のスタイル
+    実線 = xlContinuous
+    なし = xlNone
+    破線 = xlDash
+    一点鎖線 = xlDashDot
+    二点鎖線 = xlDashDotDot
+    点線 = xlDot
+    二重線 = xlDouble
+    斜破線 = xlSlantDashDot
+End Enum
+'-----------------------------------
+'元場所:LineWeightEnum
+Public Enum LineWeightEnum '線の太さ
+    太線 = xlThick
+    中太線 = xlMedium
+    細線 = xlThin
+    極細線 = xlHairline
+End Enum
+'宣言セクション終了※※※※※※※※※※※※※※※※※※※※※※※※※※※
 
-
-
-'------------------------------
-
-
-Public Sub SetBorder2D(TargetCell As Range, BaseCol&, _
+Public Sub SetBorder2D(TargetCell As Range, BaseCol As Long, _
                 Optional EdgeLineStyle As LineStyleEnum = LineStyleEnum.実線, _
                 Optional EdgeLineWeight As LineWeightEnum = LineWeightEnum.中太線, _
                 Optional InsideHorizontalLineStyle As LineStyleEnum = LineStyleEnum.点線, _
@@ -32,11 +48,15 @@ Public Sub SetBorder2D(TargetCell As Range, BaseCol&, _
 '[InsideVerticalLineStyle]   ・・・内側垂直罫線のスタイル（デフォルトは実線）
 '[InsideVerticalLineWeight]  ・・・内側垂直罫線の太さ    （デフォルトは細線）
     
-    Dim BaseList                       '基準の一次元配列
-    Dim I&, J&, K&, M&, N&             '数え上げ用(Long型)
+    Dim BaseList
+    Dim I          As Long
+    Dim N          As Long
     Dim InputSheet As Worksheet
+    Dim Rs         As Long
+    Dim Re         As Long
+    Dim Cs         As Long
+    Dim Ce         As Long
     Set InputSheet = TargetCell.Parent '対象のシート取得
-    Dim Rs&, Re&, Cs&, Ce&             '始端行,列番号および終端行,列番号(Long型)
     Rs = TargetCell(1).Row
     Cs = TargetCell(1).Column
     Re = TargetCell(TargetCell.Count).Row
@@ -61,8 +81,9 @@ Public Sub SetBorder2D(TargetCell As Range, BaseCol&, _
     BaseList = Application.Transpose(BaseList)
     
     N = UBound(BaseList, 1)
-    Dim StartCell As Range, EndCell As Range '始端終端セル
-    Dim Hantei As Boolean
+    Dim StartCell As Range
+    Dim EndCell   As Range
+    Dim Hantei    As Boolean
     
     Application.ScreenUpdating = False '画面更新解除で高速化
     For I = 1 To N
